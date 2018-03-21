@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="common/react.development.js"></script>
+    <script src="common/react-dom.development.js"></script>
+    <script src="common/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    //   const element = <h1>Hello, world!</h1>
+      function formatName(user) { 
+          return user.firstName + ' ' + user.lastName;
+       }
+       const user = {
+           firstName: 'Harper',
+           lastName: 'Perez',
+           avatarUrl: 'https://www.baidu.com/img/bd_logo1.png'
+       }
+    //   JSX 中嵌入表达式 {}
+       const element = (
+        //    <h1>Hello, {formatName(user)}</h1>
+        getGreeting(user)
+       )
+
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+    //  JSX 也是一个表达式 
+      function getGreeting(user) {
+          if(user) {
+              return  <h1>Hello, {formatName(user)}!</h1>
+          }
+          return <h1>Hello, Stranger.</h1>
+      }
+      //  用 JSX 指定属性值
+      //  class 在JSX中变为className，tabindex 变为 tabIndex
+       const element2 = <div tabIndex = "0" className = "ele">123</div>
+      //  const element2 = <img src={user.avatarUrl}/>
+      ReactDOM.render(
+        element2,
+        document.getElementById('root')
+      );
+      //  用 JSX 指定子元素
+      const element3 = (
+        <div>
+            <h1>Hello!</h1>
+            <h2>Good to see you here.</h2>
+        </div>
+        );
+        ReactDOM.render(
+        element3,
+        document.getElementById('root')
+      );
+      //JSX 表示对象
+   const element = (
+        <h1 className="greeting">
+            Hello, world!
+        </h1>
+    );
+    const element = React.createElement(
+        'h1',
+        {className: 'greeting'},
+        'Hello, world!'
+    );
+    //Babel 将JSX编译成 React.createElement() 调用。
+
+    // 注意: 这是简化的结构
+    const element = {
+        type: 'h1',
+        props: {
+            className: 'greeting',
+            children: 'Hello, world'
+        }
+    };
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="common/react.development.js"></script>
+    <script src="common/react-dom.development.js"></script>
+    <script src="common/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    //    function ActionLink() {
+    //         function handleClick(e) {
+    //             e.preventDefault();
+    //             console.log('The link was clicked.');
+    //         }
+
+    //         return (
+    //             <a href="#" onClick={handleClick}>
+    //             Click me
+    //             </a>
+    //         );
+    //     }
+    //   ReactDOM.render(
+    //     <ActionLink/>,
+    //     document.getElementById('root')
+    //   );
+
+    class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+
+        // 这个绑定是必要的，使`this`在回调中起作用
+        // this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(prevState => ({
+        isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    render() {
+        return (
+        <button onClick={this.handleClick}>
+            {this.state.isToggleOn ? 'ON' : 'OFF'}
+        </button>
+        );
+    }
+    }
+
+    ReactDOM.render(
+    <Toggle />,
+    document.getElementById('root')
+    );
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+  </body>
+</html>

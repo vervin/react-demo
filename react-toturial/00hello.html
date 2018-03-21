@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="common/react.development.js"></script>
+  <script src="common/react-dom.development.js"></script>
+  <script src="common/babel.min.js"></script>
+</head>
+   
+<body>
+  <div id="reactContainer"></div>
+  <script type="text/babel">
+      //  01first
+      //  var HelloComponent = React.createClass({
+      //    render:function () {
+      //      return React.createElement('h1', null, 'Hello world');
+      //    }
+      //  })
+
+      //  ReactDOM.render(
+      //    React.createElement(HelloComponent, null),
+      //    document.getElementById('reactContainer')
+      //  )
+
+      //02second
+      // var hello = react.createClass({
+      //   render: function () {
+      //     return(
+      //       <div>
+      //          <p>这是老版本</p>  
+      //       </div>
+      //     )
+      //   }
+      // })
+
+      // ReactDOM.render(
+      //   <hello/>,
+      //   document.getElementById("reactContainer")
+      // )
+      //03ok
+        //  const ele = <p>es6</p>
+        //  ReactDOM.render(
+        //    ele,
+        //    document.getElementById("reactContainer")
+        //  )
+      //04ok2
+      class Welcome extends React.Component{
+          render(){
+            return(
+              <div> i am ok too, this is es6 defind component</div>
+            )
+          }
+      }
+      ReactDOM.render(
+        <Welcome/>,
+        document.getElementById('reactContainer')
+      )
+  </script>
+</body>
+</html>
