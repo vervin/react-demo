@@ -27,7 +27,7 @@ ReactDOM.render(
 
 * 新版使用es6
 
->创建变量使用const
+>创建元素使用const | 元素是构成 React 应用的最小单位。
 ```
 const ele = <p>es6</p>
 ReactDOM.render(
@@ -61,3 +61,22 @@ ReactDOM.render(
 > 3.如何引用jsx语法？
 >>引用一个库文件browser.min.js或者browser.js都行
 在编写React的script标签的type属性为text/babel
+
+### 组件的定义
+```
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+```
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+> 上面两个组件在React中是相同的。
+### props
+> 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
+
+见[04components.html](https://github.com/vervin/react-demo/blob/master/react-toturial/04Components.html)
