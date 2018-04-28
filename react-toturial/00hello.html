@@ -8,43 +8,43 @@
   <script src="common/react-dom.development.js"></script>
   <script src="common/babel.min.js"></script>
 </head>
-   
+
 <body>
   <div id="reactContainer"></div>
   <script type="text/babel">
       //  01first
-      //  var HelloComponent = React.createClass({
-      //    render:function () {
-      //      return React.createElement('h1', null, 'Hello world');
-      //    }
-      //  })
+       var HelloComponent = React.createClass({
+         render:function () {
+           return React.createElement('h1', null, 'Hello world');
+         }
+       })
 
-      //  ReactDOM.render(
-      //    React.createElement(HelloComponent, null),
-      //    document.getElementById('reactContainer')
-      //  )
+       ReactDOM.render(
+         React.createElement(HelloComponent, null),
+         document.getElementById('reactContainer')
+       )
 
-      //02second
-      // var hello = react.createClass({
-      //   render: function () {
-      //     return(
-      //       <div>
-      //          <p>这是老版本</p>  
-      //       </div>
-      //     )
-      //   }
-      // })
+      //02second JSX
+      var hello = react.createClass({
+        render: function () {
+          return(
+            <div>
+               <p>这是老版本</p>  
+            </div>
+          )
+        }
+      })
 
-      // ReactDOM.render(
-      //   <hello/>,
-      //   document.getElementById("reactContainer")
-      // )
+      ReactDOM.render(
+        <hello/>,
+        document.getElementById("reactContainer")
+      )
       //03ok
-        //  const ele = <p>es6</p>
-        //  ReactDOM.render(
-        //    ele,
-        //    document.getElementById("reactContainer")
-        //  )
+         const ele = <p>es6</p>
+         ReactDOM.render(
+           ele,
+           document.getElementById("reactContainer")
+         )
       //04ok2
       class Welcome extends React.Component{
           render(){
@@ -59,4 +59,5 @@
       )
   </script>
 </body>
+
 </html>
