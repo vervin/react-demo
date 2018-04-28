@@ -16,7 +16,11 @@ ReactDOM.render(
   [callback] //一个回调函数
 )
 ```
+## 组件
 
+> 1.组件是做什么的？
+>> 如果一个虚拟dom复用多次的时候，通常我们将它封装在一个组件当中，通常用组件封装一组虚拟dom，这一组虚拟dom通常称他为虚拟dom树。
+> 2组件如何创建？
 ### createClass()
 
 > 已废弃 见 [00hello.html](https://github.com/vervin/react-demo/blob/master/react-toturial/00hello.html)
@@ -47,23 +51,11 @@ ReactDOM.render(
     document.getElementById("app")
 );
 ```
-## 组件
-
-> 1组件是做什么的？
->> 如果一个虚拟dom复用多次的时候，通常我们将它封装在一个组件当中，通常用组件封装一组虚拟dom，这一组虚拟dom通常称他为虚拟dom树。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Jsx语法引用
+> 1.为什么引用jsx语法？
+>>  解决了创建虚拟dom成本过大的问题。
+> 2.什么是jsx语法？
+>> 简单地说，就是jsx语法让我们可以再js中写xhtml
+> 3.如何引用jsx语法？
+>>引用一个库文件browser.min.js或者browser.js都行
+在编写React的script标签的type属性为text/babel
