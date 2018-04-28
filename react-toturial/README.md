@@ -21,7 +21,7 @@ ReactDOM.render(
 
 > 已废弃 见 [00hello.html](https://github.com/vervin/react-demo/blob/master/react-toturial/00hello.html)
 
-> * 新版使用es6
+* 新版使用es6
 
 >创建变量使用const
 ```
