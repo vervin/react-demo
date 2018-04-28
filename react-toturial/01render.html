@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>非jsx编译时的创建虚拟dom</title>
+    <script src="common/react.development.js"></script>
+    <script src="common/react-dom.development.js"></script>
+    <script src="common/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+     var virtualDOM = React.createElement(
+         "ul",  //type
+         null, //[props]
+         "我是ul", //[...children]
+         React.createElement(
+              "li",
+              null,
+              "我是li1"
+         ),
+         React.createElement(
+              "li",
+              null,
+              "我是li2"
+         ),
+         React.createElement(
+              "li",
+              null,
+              "我是li3"
+         ),
+     )
+     ReactDOM.render(
+      virtualDOM,
+      document.getElementById("root")
+     )
+    </script>
+   
+  </body>
+</html>

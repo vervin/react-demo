@@ -47,6 +47,10 @@ ReactDOM.render(
     document.getElementById("app")
 );
 ```
+## 组件
+
+> 1组件是做什么的？
+>> 如果一个虚拟dom复用多次的时候，通常我们将它封装在一个组件当中，通常用组件封装一组虚拟dom，这一组虚拟dom通常称他为虚拟dom树。
 
 
 
