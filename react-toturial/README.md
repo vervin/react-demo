@@ -79,4 +79,5 @@ class Welcome extends React.Component {
 ### props
 > 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
 
-见[04components.html](https://github.com/vervin/react-demo/blob/master/react-toturial/04Components.html)
+具体见[04components.html](https://github.com/vervin/react-demo/blob/master/react-toturial/04Components.html)
+
