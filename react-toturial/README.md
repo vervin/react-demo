@@ -54,8 +54,10 @@ ReactDOM.render(
 ### Jsx语法引用
 > 1.为什么引用jsx语法？
 >>  解决了创建虚拟dom成本过大的问题。
+
 > 2.什么是jsx语法？
 >> 简单地说，就是jsx语法让我们可以再js中写xhtml
+
 > 3.如何引用jsx语法？
 >>引用一个库文件browser.min.js或者browser.js都行
 在编写React的script标签的type属性为text/babel
