@@ -78,6 +78,9 @@ class Welcome extends React.Component {
 > 上面两个组件在React中是相同的。
 ### props
 > 组件从概念上看就像是函数，它可以接收任意的输入值（称之为“props”），并返回一个需要在页面上展示的React元素。
+> props是组件固有属性的集合，其数据由外部传入，一般在整个组件的生命周期中都是只读的。属性的初识值通常由React.createElement函数或者JSX中标签的属性值进行传递，并合并到组件实例对象的this.props中。
 
 具体见[04components.html](https://github.com/vervin/react-demo/blob/master/react-toturial/04Components.html)
 
+### state
+>状态与属性十分相似，但是状态是私有的，完全受控于当前组件。
